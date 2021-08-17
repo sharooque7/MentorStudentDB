@@ -13,9 +13,6 @@ app.use(express.json());
 const router = require("./router/route");
 app.use(express.urlencoded({ extended: false }));
 
-const MONGODB_URI =
-  "mongodb+srv://practice:Mongo7$@practice.a2eyo.mongodb.net/MentorStudent?retryWrites=true&w=majority";
-
 app.set("view engine", "ejs");
 app.set("views", "views");
 

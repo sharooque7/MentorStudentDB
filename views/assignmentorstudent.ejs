@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+      <form action="/assignmentorstudent" method="POST">
+        <label for="Select Student">Select Student</label>
+      <select name="student" id="student" value="">
+        <% stud.map(function(stud) { %>
+              <option value=<%= stud.studentName %>><%= stud.studentName %></option>
+          <% }); %>
+      </select>
+        <br/>
+      <label for="Select Mentor">Select Mentor</label>
+      <select name="mentor" id="mentor" value="">
+        <% ment.map(function(ment) { %>
+            <option value=<%= ment.MentorName %>><%= ment.MentorName %></option>
+        <% }); %>
+      </select>
+      <br>
+      <button type="submit">Add</button>
+      </form>
+  </body>
+  </body>
+</html>

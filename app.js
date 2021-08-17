@@ -24,6 +24,6 @@ mongoose
     useUnifiedTopology: true,
   })
   .then((result) => {
-    app.listen(port, () => console.log(`On ${PORT}`));
+    app.listen(port, () => console.log(`On ${port}`));
   })
   .catch((err) => console.log(err));

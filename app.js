@@ -19,11 +19,12 @@ app.set("views", "views");
 app.use(router);
 
 mongoose
-  .connect(MONGODB_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then((result) => {
-    app.listen(port, () => console.log(`On ${port}`));
+    app.listen(port, () => {
+      console.log("On 3000");
+    });
   })
-  .catch((err) => console.log(err));
+  .catch((err) => {
+    console.log(err);
+  });

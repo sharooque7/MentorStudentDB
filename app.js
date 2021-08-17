@@ -1,7 +1,7 @@
 require("dotenv").config();
 
 const MONGODB_URI = process.env.MONGODB_URI;
-const PORT = process.env.PORT || 4000;
+const port = process.env.PORT || 4000;
 const express = require("express");
 
 const app = express();
@@ -24,6 +24,6 @@ mongoose
     useUnifiedTopology: true,
   })
   .then((result) => {
-    app.listen(PORT, () => console.log(`On ${PORT}`));
+    app.listen(port, () => console.log(`On ${port}`));
   })
   .catch((err) => console.log(err));
